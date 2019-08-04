@@ -1,0 +1,61 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-select --save
+
+PATH: 
+  C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_25\bin;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;C:\Program Files (x86)\Borland\Delphi7\Bin;C:\Program Files (x86)\Borland\Delphi7\Projects\Bpl;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\xampp\php;C:\composer;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\Users\Angga-PC\.windows-build-tools\python27\;C:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\Users\Angga-PC\AppData\Roaming\npm\node_modules\windows-build-tools\node_modules\.bin;C:\Users\Angga-PC\AppData\Roaming\npm\node_modules\.bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_25\bin;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;C:\Program Files (x86)\Borland\Delphi7\Bin;C:\Program Files (x86)\Borland\Delphi7\Projects\Bpl;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\xampp\php;C:\composer;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\Users\Angga-PC\AppData\Local\Microsoft\WindowsApps;C:\Users\Angga-PC\AppData\Roaming\Composer\vendor\bin;C:\Users\Angga-PC\AppData\Roaming\npm;C:\Users\Angga-PC\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  10.15.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, copyfile 'C:\Users\Angga-PC\AppData\Local\Yarn\Cache\v4\npm-webpack-dev-server-3.2.1-1b45ce3ecfc55b6ebe5e36dab2777c02bc508c4e\node_modules\webpack-dev-server\client\sockjs.bundle.js' -> 'C:\Bitnami\wappstack-5.6.40-0\apache2\htdocs\bips01\node_modules\webpack-dev-server\client\sockjs.bundle.js'
+
+npm manifest: 
+  {
+    "name": "bips01",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "bootstrap": "^4.3.1",
+      "react": "^16.8.6",
+      "react-dom": "^16.8.6",
+      "react-scripts": "3.0.1",
+      "react-websocket": "^2.0.1",
+      "reactstrap": "^8.0.1",
+      "semantic-ui-react": "^0.87.3",
+      "uuid": "^3.3.2"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
