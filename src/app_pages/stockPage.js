@@ -364,7 +364,8 @@ class StockHistoryPage extends React.PureComponent {
                             <div className="px-1 mx-0 col-sm-12 row">
                                 <div className="col-sm-8 px-1 py-2">
                                     <div className="card card-475 bg-trading-gray">
-                                        <Table responsive borderless size="sm" className="text-center align-middle align-self-center">
+                                        <div className="card-body scrollable">
+                                            <Table responsive borderless size="sm" className="text-center align-middle align-self-center">
                                             <thead className="text-white t-border-bottom-bold t-border-top-bold">
                                             <tr>
                                                 <th>Broker</th>
@@ -390,12 +391,14 @@ class StockHistoryPage extends React.PureComponent {
                                             </tr>
                                             </tbody>
                                         </Table>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div className="col-sm-4 px-1 py-2">
                                     <div className="col-sm-12 row px-0 mx-0 mb-3 card card-mini bg-trading-gray">
-                                        <Table responsive borderless size="sm" className="text-center align-self-center align-middle">
+                                        <div className="card-body scrollable">
+                                            <Table responsive borderless size="sm" className="text-center align-self-center align-middle">
                                                 <thead className="text-white t-border-top-bold t-border-bottom-bold">
                                                 <tr>
                                                     <th>Price</th>
@@ -455,9 +458,11 @@ class StockHistoryPage extends React.PureComponent {
                                                 </tr>
                                                 </tbody>
                                         </Table>
+                                        </div>
                                     </div>
                                     <div className="col-sm-12 row px-0 mx-0 mb-3 card card-mini bg-trading-gray">
-                                        <Table responsive borderless size="sm" className="text-center align-self-center align-middle">
+                                        <div className="card-body scrollable">
+                                            <Table responsive borderless size="sm" className="text-center align-self-center align-middle">
                                                 <thead className="text-white t-border-top-bold t-border-bottom-bold">
                                                 <tr>
                                                     <th>Buyer</th>
@@ -517,9 +522,11 @@ class StockHistoryPage extends React.PureComponent {
                                                 </tr>
                                                 </tbody>
                                         </Table>
+                                        </div>
                                     </div>
                                     <div className="col-sm-12 row px-0 mx-0 mb-3 card card-mini bg-trading-gray">
-                                        <Table responsive borderless size="sm" className="text-center align-self-center align-middle">
+                                        <div className="card-body scrollable">
+                                            <Table responsive borderless size="sm" className="text-center align-self-center align-middle">
                                                 <thead className="text-white t-border-top-bold t-border-bottom-bold">
                                                 <tr>
                                                     <th>Seller</th>
@@ -579,6 +586,7 @@ class StockHistoryPage extends React.PureComponent {
                                                 </tr>
                                                 </tbody>
                                         </Table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

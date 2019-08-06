@@ -761,8 +761,82 @@ class TopBrokerMarketStatistikPage extends React.PureComponent {
             <>
                 <AppFrameAction ref="frameAction" />
                 <WSConnectionAction />
+                <div className="col-sm-12 row px-0 mx-0 mb-3 px-2 card card-mini bg-black-trading">
+                    <div class="card-body scrollable">
+                        <Table responsive borderless size="sm" className="text-center align-self-center align-middle">
+                        <thead className="text-white d-border-table-bottom">
+                        <tr className="bg-grey text-left">
+                            <th colSpan="8">TOP BUYER</th>
+                        </tr>
+                        <tr>
+                            <th>#</th>
+                            <th></th>
+                            <th>Company</th>
+                            <th>T.Val(B)</th>
+                            <th>B.Val(B)</th>
+                            <th>S.Val(B)</th>
+                            <th>T.Val(M)</th>
+                            <th>T.Freq</th>
+                        </tr>
+                        </thead>
+                        <tbody className="text-white no-wrap">
+                        <tr>
+                            <td>1</td>
+                            <td>DX</td>
+                            <td className="text-left">Bahana Sekuritas</td>
+                            <td className="text-right">93.64</td>
+                            <td className="text-right text-success">61.02 </td>
+                            <td className="text-right text-danger">38.02 </td>
+                            <td className="text-right">104.02 </td>
+                            <td className="text-right">5,716 </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>MS</td>
+                            <td className="text-left">Morgan Stanley Sekuritas Indonesia</td>
+                            <td className="text-right">93.64</td>
+                            <td className="text-right text-success">61.02 </td>
+                            <td className="text-right text-danger">38.02 </td>
+                            <td className="text-right">104.02 </td>
+                            <td className="text-right">5,716 </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>KS</td>
+                            <td className="text-left">Kresna Sekuritas</td>
+                            <td className="text-right">93.64</td>
+                            <td className="text-right text-success">61.02 </td>
+                            <td className="text-right text-danger">38.02 </td>
+                            <td className="text-right">104.02 </td>
+                            <td className="text-right">5,716 </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>RX</td>
+                            <td className="text-left">Macquarle Sekuritas Indonesia</td>
+                            <td className="text-right">93.64</td>
+                            <td className="text-right text-success">61.02 </td>
+                            <td className="text-right text-danger">38.02 </td>
+                            <td className="text-right">104.02 </td>
+                            <td className="text-right">5,716 </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>YU</td>
+                            <td className="text-left">CGS-CIMB Sekuritas Indonesia</td>
+                            <td className="text-right">93.64</td>
+                            <td className="text-right text-success">61.02 </td>
+                            <td className="text-right text-danger">38.02 </td>
+                            <td className="text-right">104.02 </td>
+                            <td className="text-right">5,716 </td>
+                        </tr>
+                        </tbody>
+                    </Table>
+                    </div>
+                </div>
                 <div className="col-sm-12 row px-0 mx-0 mb-3 px-2 card card-250 bg-black-trading">
-                    <Table responsive borderless size="sm" className="text-center align-self-center align-middle">
+                    <div className="card-body scrollable">
+                        <Table responsive borderless size="sm" className="text-center align-self-center align-middle">
                         <thead className="text-white d-border-table-bottom">
                         <tr>
                             <th>#</th>
@@ -858,80 +932,11 @@ class TopBrokerMarketStatistikPage extends React.PureComponent {
                         </tr>
                         </tbody>
                     </Table>
+                    </div>
                 </div>
                 <div className="col-sm-12 row px-0 mx-0 mb-3 px-2 card card-mini bg-black-trading">
-                    <Table responsive borderless size="sm" className="text-center align-self-center align-middle">
-                        <thead className="text-white d-border-table-bottom">
-                        <tr className="bg-grey text-left">
-                            <th colSpan="8">TOP BUYER</th>
-                        </tr>
-                        <tr>
-                            <th>#</th>
-                            <th></th>
-                            <th>Company</th>
-                            <th>T.Val(B)</th>
-                            <th>B.Val(B)</th>
-                            <th>S.Val(B)</th>
-                            <th>T.Val(M)</th>
-                            <th>T.Freq</th>
-                        </tr>
-                        </thead>
-                        <tbody className="text-white no-wrap">
-                        <tr>
-                            <td>1</td>
-                            <td>DX</td>
-                            <td className="text-left">Bahana Sekuritas</td>
-                            <td className="text-right">93.64</td>
-                            <td className="text-right text-success">61.02 </td>
-                            <td className="text-right text-danger">38.02 </td>
-                            <td className="text-right">104.02 </td>
-                            <td className="text-right">5,716 </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>MS</td>
-                            <td className="text-left">Morgan Stanley Sekuritas Indonesia</td>
-                            <td className="text-right">93.64</td>
-                            <td className="text-right text-success">61.02 </td>
-                            <td className="text-right text-danger">38.02 </td>
-                            <td className="text-right">104.02 </td>
-                            <td className="text-right">5,716 </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>KS</td>
-                            <td className="text-left">Kresna Sekuritas</td>
-                            <td className="text-right">93.64</td>
-                            <td className="text-right text-success">61.02 </td>
-                            <td className="text-right text-danger">38.02 </td>
-                            <td className="text-right">104.02 </td>
-                            <td className="text-right">5,716 </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>RX</td>
-                            <td className="text-left">Macquarle Sekuritas Indonesia</td>
-                            <td className="text-right">93.64</td>
-                            <td className="text-right text-success">61.02 </td>
-                            <td className="text-right text-danger">38.02 </td>
-                            <td className="text-right">104.02 </td>
-                            <td className="text-right">5,716 </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>YU</td>
-                            <td className="text-left">CGS-CIMB Sekuritas Indonesia</td>
-                            <td className="text-right">93.64</td>
-                            <td className="text-right text-success">61.02 </td>
-                            <td className="text-right text-danger">38.02 </td>
-                            <td className="text-right">104.02 </td>
-                            <td className="text-right">5,716 </td>
-                        </tr>
-                        </tbody>
-                    </Table>
-                </div>
-                <div className="col-sm-12 row px-0 mx-0 mb-3 px-2 card card-mini bg-black-trading">
-                    <Table responsive borderless size="sm" className="text-center align-self-center align-middle">
+                    <div className="card-body scrollable">
+                        <Table responsive borderless size="sm" className="text-center align-self-center align-middle">
                         <thead className="text-white d-border-table-bottom">
                         <tr className="bg-grey text-left">
                             <th colSpan="8">TOP SELLER</th>
@@ -1000,6 +1005,7 @@ class TopBrokerMarketStatistikPage extends React.PureComponent {
                         </tr>
                         </tbody>
                     </Table>
+                    </div>
                 </div>
             </>
         );

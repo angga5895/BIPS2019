@@ -100,7 +100,8 @@ class LiveTradePage extends React.PureComponent {
                 <div className="col-sm-12 row px-0 mx-0 row">
                     <div className="col-sm-8 px-2 mx-0">
                         <div className="card card-600 bg-trading-gray">
-                            <Table responsive borderless size="sm" className="text-center align-middle align-self-center">
+                            <div className="card-body scrollable">
+                                <Table responsive borderless size="sm" className="text-center align-middle align-self-center">
                                 <thead className="text-white t-border-bottom-bold t-border-top-bold">
                                 <tr>
                                     <th>Code</th>
@@ -428,6 +429,7 @@ class LiveTradePage extends React.PureComponent {
                                 </tr>
                                 </tbody>
                             </Table>
+                            </div>
                         </div>
                     </div>
                     <div className="col-sm-4 px-2 mx-0">
