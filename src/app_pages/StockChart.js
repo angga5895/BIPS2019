@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AnyChart from '../../node_modules/anychart-react/dist/anychart-react.min.js';
 import anychart from 'anychart';
+import {cssmode} from "../App";
 
 const StockChart = () => {
 
@@ -188,7 +189,11 @@ const StockChart = () => {
     // set container id for the chart
     // chart.container('container');
 
-    chart.background().fill("#181717");
+    if(cssmode == 'night'){
+        chart.background().fill("#181717");
+    } else if (cssmode == 'light'){
+        chart.background().fill("#E6E7E7");
+    }
 
     // initiate chart drawing
     chart.draw();

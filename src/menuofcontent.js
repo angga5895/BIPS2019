@@ -2,7 +2,6 @@ import React from 'react';
 import { ContextConnector } from './appcontext.js';
 import { AppFrameContext } from './appframe.js';
 
-import './App.css';
 
 const MenuOfContent_Base = (props) => {
     // expected in props:

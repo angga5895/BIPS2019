@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import './bootstrap-dist/bootstrap/dist/css/bootstrap.min.css';
 import './icons/fontawesome.css';
 import './icons/ionicons.css';
 import './icons/linearicons.css';

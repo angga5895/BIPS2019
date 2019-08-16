@@ -6,8 +6,8 @@ import Select from 'react-select';
 import { Table ,Dropdown, DropdownToggle, DropdownMenu, DropdownItem, UncontrolledDropdown } from 'reactstrap';
 import user_avatar from './img/man.png';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, UncontrolledCollapse } from 'reactstrap';
+import {cssmode} from "./App";
 
-import './App.css';
 
 const options = [
     { value: 'componentindex', label: 'Component Index' },
@@ -258,6 +258,40 @@ const UISelectionTab = ContextConnector(AppFrameContext,
 )(UISelectionTab_Base);
 
 class SelectItem1 extends React.Component {
+    selectStyleNight = theme => ({
+        ...theme,
+        borderRadius: 0,
+        colors: {
+            ...theme.colors,
+            neutral0: '#181717',
+            neutral20 : '#565252',
+            neutral30 : '#565252',
+            neutral40 : '#cccccc',
+            neutral80 : '#FFFFFF',
+            primary75 : '#FFFFFF',
+            primary50 : '#4D4D4E',
+            primary25 : '#4D4D4E',
+            primary : '#808282',
+        },
+    });
+
+    selectStyleLight = theme => ({
+        ...theme,
+        borderRadius: 0,
+        colors: {
+            ...theme.colors,
+            neutral0  : '#F8F9F9',
+            neutral20 : '#DDDDDD',
+            neutral30 : '#DDDDDD',
+            neutral40 : '#767676',
+            neutral80 : '#999999',
+            primary75 : '#999999',
+            primary50 : '#F3F3F3',
+            primary25 : '#F3F3F3',
+            primary : '#CCCCCC',
+        },
+    });
+
     render() {
         return (
             <div className="nav-link col-sm-12 px-0 mx-0 py-3 text-white">
@@ -267,22 +301,7 @@ class SelectItem1 extends React.Component {
                         defaultValue={option[0]}
                         label="Single select"
                         options={option}
-                        theme={theme => ({
-                            ...theme,
-                            borderRadius: 0,
-                            colors: {
-                                ...theme.colors,
-                                neutral0: '#181717',
-                                neutral20 : '#565252',
-                                neutral30 : '#565252',
-                                neutral40 : '#cccccc',
-                                neutral80 : '#FFFFFF',
-                                primary75 : '#FFFFFF',
-                                primary50 : '#4D4D4E',
-                                primary25 : '#4D4D4E',
-                                primary : '#808282',
-                            },
-                        })}
+                        theme={cssmode == 'night' ? this.selectStyleNight : this.selectStyleLight}
                     />
                 </div>
                 <label className="col-md-12 f-11-center">11/03/2019 | 09.45 <span className="text-success"> Open</span></label>
@@ -292,6 +311,40 @@ class SelectItem1 extends React.Component {
 }
 
 class SelectItem2 extends React.Component {
+    selectStyleNight = theme => ({
+        ...theme,
+        borderRadius: 0,
+        colors: {
+            ...theme.colors,
+            neutral0  : '#181717',
+            neutral20 : '#565252',
+            neutral30 : '#565252',
+            neutral40 : '#cccccc',
+            neutral80 : '#FFFFFF',
+            primary75 : '#FFFFFF',
+            primary50 : '#4D4D4E',
+            primary25 : '#4D4D4E',
+            primary : '#808282',
+        },
+    });
+
+    selectStyleLight = theme => ({
+        ...theme,
+        borderRadius: 0,
+        colors: {
+            ...theme.colors,
+            neutral0  : '#F8F9F9',
+            neutral20 : '#DDDDDD',
+            neutral30 : '#DDDDDD',
+            neutral40 : '#767676',
+            neutral80 : '#999999',
+            primary75 : '#999999',
+            primary50 : '#F3F3F3',
+            primary25 : '#F3F3F3',
+            primary : '#CCCCCC',
+        },
+    });
+
     render() {
         return (
             <div className="nav-link col-sm-12 px-0 mx-0 py-3 text-white">
@@ -301,22 +354,7 @@ class SelectItem2 extends React.Component {
                         defaultValue={options[0]}
                         label="Single select"
                         options={options}
-                        theme={theme => ({
-                            ...theme,
-                            borderRadius: 0,
-                            colors: {
-                                ...theme.colors,
-                                neutral0: '#181717',
-                                neutral20 : '#565252',
-                                neutral30 : '#565252',
-                                neutral40 : '#cccccc',
-                                neutral80 : '#FFFFFF',
-                                primary75 : '#FFFFFF',
-                                primary50 : '#4D4D4E',
-                                primary25 : '#4D4D4E',
-                                primary : '#808282',
-                            },
-                        })}
+                        theme={cssmode == 'night' ? this.selectStyleNight : this.selectStyleLight}
                     />
                 </div>
                 <label className="col-md-12 f-11-center text-success">6,453,98 +68.8 (+1.08%)</label>

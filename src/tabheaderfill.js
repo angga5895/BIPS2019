@@ -4,7 +4,6 @@ import { AppFrameContext } from './appframe.js';
 import { Menu, Input } from 'semantic-ui-react';
 import Select from 'react-select';
 
-import './App.css';
 
 const FillHeaderTab_Base = (props) => {
     // expected in props:

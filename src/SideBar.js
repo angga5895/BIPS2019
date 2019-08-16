@@ -1,7 +1,7 @@
 import React from "react";
 import {Button} from "reactstrap";
-import './App.css';
 import Select from "react-select";
+import {cssmode} from "./App";
 
 
 const option = [
@@ -53,6 +53,40 @@ class SideBar extends React.Component{
 }
 
 class SelectGroup extends React.Component {
+    selectStyleNight = theme => ({
+            ...theme,
+            borderRadius: 0,
+            colors: {
+                ...theme.colors,
+                neutral0: '#3D3E3F',
+                neutral20 : '#333332',
+                neutral30 : '#333332',
+                neutral40 : '#1A1A1A',
+                neutral80 : '#FFFFFF',
+                primary75 : '#FFFFFF',
+                primary50 : '#4D4D4E',
+                primary25 : '#4D4D4E',
+                primary : '#808282',
+            },
+        });
+
+    selectStyleLight = theme => ({
+        ...theme,
+        borderRadius: 0,
+        colors: {
+            ...theme.colors,
+            neutral0: '#E7E8E8',
+            neutral20 : '#DDDDDD',
+            neutral30 : '#DDDDDD',
+            neutral40 : '#767676',
+            neutral80 : '#999999',
+            primary75 : '#999999',
+            primary50 : '#F3F3F3',
+            primary25 : '#F3F3F3',
+            primary : '#CCCCCC',
+        },
+    });
+
     render() {
         return (
             <div className="col-sm-12 px-0 mx-0 text-white">
@@ -62,22 +96,7 @@ class SelectGroup extends React.Component {
                         defaultValue={option[0]}
                         label="Single select"
                         options={option}
-                        theme={theme => ({
-                            ...theme,
-                            borderRadius: 0,
-                            colors: {
-                                ...theme.colors,
-                                neutral0: '#3D3E3F',
-                                neutral20 : '#333332',
-                                neutral30 : '#333332',
-                                neutral40 : '#1A1A1A',
-                                neutral80 : '#FFFFFF',
-                                primary75 : '#FFFFFF',
-                                primary50 : '#4D4D4E',
-                                primary25 : '#4D4D4E',
-                                primary : '#808282',
-                            },
-                        })}
+                        theme={cssmode == 'night' ? this.selectStyleNight : this.selectStyleLight}
                     />
                 </div>
             </div>

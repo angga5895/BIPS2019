@@ -1,6 +1,5 @@
 // system Libraries
 import React from 'react';
-import './../App.css';
 import UISelectionTab from "../selectiontab";
 import {Button, Table, UncontrolledTooltip} from "reactstrap";
 

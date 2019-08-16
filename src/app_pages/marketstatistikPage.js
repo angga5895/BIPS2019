@@ -10,6 +10,7 @@ import Select from "react-select";
 import ModalBuy from "./app_modals/modal_buy";
 import ModalSell from "./app_modals/modal_sell";
 import StockChart from "./StockChart";
+import {cssmode} from "../App";
 
 
 const CustomFrameHeaderMarketStatistik= (props) =>{
@@ -502,7 +503,7 @@ class IndiceMarketStatistikPage extends React.PureComponent{
                     </div>
                     <div className="card-body px-0 mx-0 my-0 py-0 scrollable">
                         <Table responsive borderless size="sm" className="text-center align-middle align-self-center">
-                        <thead className="text-white t-border-bottom bg-gray-tradding">
+                        <thead className="t-border-bottom bg-gray-tradding">
                         <tr>
                             <th>#</th>
                             <th>Code</th>
@@ -1025,6 +1026,40 @@ const option = [
 ];
 
 class SelectChoose extends React.Component {
+    selectStyleNight = theme => ({
+        ...theme,
+        borderRadius: 0,
+        colors: {
+            ...theme.colors,
+            neutral0  : '#181717',
+            neutral20 : '#565252',
+            neutral30 : '#565252',
+            neutral40 : '#cccccc',
+            neutral80 : '#FFFFFF',
+            primary75 : '#FFFFFF',
+            primary50 : '#4D4D4E',
+            primary25 : '#4D4D4E',
+            primary : '#0363A7',
+        },
+    });
+
+    selectStyleLight = theme => ({
+        ...theme,
+        borderRadius: 0,
+        colors: {
+            ...theme.colors,
+            neutral0  : '#E7E7E7',
+            neutral20 : '#9A9A9A',
+            neutral30 : '#9A9A9A',
+            neutral40 : '#767676',
+            neutral80 : '#888888',
+            primary75 : '#888888',
+            primary50 : '#F3F3F3',
+            primary25 : '#F3F3F3',
+            primary : '#0363A7',
+        },
+    });
+
     render() {
         return (
             <div className="col-md-12 bg-black-grey px-0 text-center text-white">
@@ -1033,22 +1068,7 @@ class SelectChoose extends React.Component {
                     defaultValue={option[0]}
                     label="Single select"
                     options={option}
-                    theme={theme => ({
-                        ...theme,
-                        borderRadius: 0,
-                        colors: {
-                            ...theme.colors,
-                            neutral0: '#181717',
-                            neutral20 : '#4D4D4E',
-                            neutral30 : '#4D4D4E',
-                            neutral40 : '#cccccc',
-                            neutral80 : '#FFFFFF',
-                            primary75 : '#FFFFFF',
-                            primary50 : '#565252',
-                            primary25 : '#565252',
-                            primary : '#808282',
-                        },
-                    })}
+                    theme={cssmode == 'night' ? this.selectStyleNight : this.selectStyleLight}
                 />
             </div>
         );

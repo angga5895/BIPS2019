@@ -1,10 +1,10 @@
 import React from "react";
 import PinInput from "react-pin-input";
 import { Alert } from 'reactstrap';
-import './../App.css';
 import {AppFrameAction} from "../appframe";
 import {Table} from "reactstrap";
 import AmendArrow from "./../img/amend-arrow.svg";
+import {cssmode} from "../App";
 
 class AlertPinSalah extends React.PureComponent{
     render() {
@@ -140,8 +140,8 @@ class VerifyPIN extends React.PureComponent{
                     </div>
                     <div className="form-group mb-0">
                         <PinInput
-                            inputStyle={{"color":"#FFFFFF", "border":"#565252 1px solid","border-radius":"10%","width":"15.25%"}}
-                            inputFocusStyle={{"color":"#FFFFFF", "border":"#065A96 1px solid", "border-radius":"10%","width":"15.25%"}}
+                            inputStyle={{"color":cssmode == 'night' ? '#FFFFFF':'#999999', "border":"#565252 1px solid","border-radius":"10%","width":"15.25%"}}
+                            inputFocusStyle={{"color":cssmode == 'night' ? '#FFFFFF':'#999999', "border":"#065A96 1px solid", "border-radius":"10%","width":"15.25%"}}
                             length={6}
                             focus
                             secret
@@ -172,8 +172,8 @@ class VerifyPIN extends React.PureComponent{
                     </div>
 
                     <div className={this.state.visible ? "col-sm-12 text-center bg-danger fade-in" : "col-sm-12 text-center bg-danger fade-out"}>
-                        <div className="px-2 pt-2 text-right"><i className="click-pointer icofont icofont-close" onClick={this.onClickCloseAlert}></i></div>
-                        <div className="px-2 py-4">
+                        <div className={cssmode == 'night'? "px-2 pt-2 text-right text-white" : "px-2 pt-2 text-right text-black"}><i className="click-pointer icofont icofont-close" onClick={this.onClickCloseAlert}></i></div>
+                        <div className={cssmode == 'night'? "px-2 py-4 text-white" : "px-2 py-4 text-black"}>
                             PIN is wrong!
                         </div>
                     </div>
@@ -202,7 +202,7 @@ class detailBuyModal extends React.Component {
                         <Table size="sm" responsive borderless className="text-white">
                             <thead className="d-border-table">
                             <tr>
-                                <th className="text-center bg-danger" colSpan="3">BUY</th>
+                                <th className={cssmode == 'night'? "text-center bg-danger text-white" : "text-center bg-danger text-black"} colSpan="3">BUY</th>
                             </tr>
                             </thead>
                             <tbody className="no-wrap d-border-table">
@@ -283,7 +283,7 @@ class detailSellModal extends React.Component {
                         <Table size="sm" responsive borderless className="text-white">
                             <thead className="d-border-table">
                             <tr>
-                                <th className="text-center bg-success" colSpan="3">SELL</th>
+                                <th className={cssmode == 'night'? "text-center bg-success text-white" : "text-center bg-success text-black"} colSpan="3">SELL</th>
                             </tr>
                             </thead>
                             <tbody className="no-wrap d-border-table">
@@ -364,7 +364,7 @@ class detailWithdrawModal extends React.Component {
                         <Table size="sm" responsive borderless className="text-white">
                             <thead className="d-border-table">
                             <tr>
-                                <th className="text-center bg-brown" colSpan="3">WITHDRAW</th>
+                                <th className={cssmode == 'night'? "text-center bg-brown text-white" : "text-center bg-brown text-black"} colSpan="3">WITHDRAW</th>
                             </tr>
                             </thead>
                             <tbody className="no-wrap d-border-table">

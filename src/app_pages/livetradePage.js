@@ -48,7 +48,6 @@ class LiveTradePage extends React.PureComponent {
                 <div className="col-sm-12 px-0 mx-0 row">
                     <div className="col-mbl-radio px-0 mx-0 row">
                         <ul className="ul-radio col-sm-12 px-0 mx-0 row">
-                            <div className="title-radio col-title-radio px-4 mx-0">Display</div>
 
                             <li className="li-radio col-radio px-0 mx-0" onClick={
                                 (e) => {
@@ -92,8 +91,8 @@ class LiveTradePage extends React.PureComponent {
                     </div>
                     <div className="col-mbl-radio-o px-0 mx-0">
                         <div className="title-radio-right col-sm-12 pull-right text-right">
-                            <Button className="d-border mx-1 col-sm-3" size="md" color="success" onClick={this.buttonClickSell}><span className="text-white">Sell</span></Button>
-                            <Button className="d-border mx-1 col-sm-3" size="md" color="danger" onClick={this.buttonClickBuy}><span className="text-white">Buy</span></Button>
+                            <Button className="d-border mx-1 col-sm-3" size="md" color="success" onClick={this.buttonClickSell}><span>Sell</span></Button>
+                            <Button className="d-border mx-1 col-sm-3" size="md" color="danger" onClick={this.buttonClickBuy}><span>Buy</span></Button>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import './../App.css';
 import Select from 'react-select';
 import {Button, Table, InputGroupText, Input,
     DropdownToggle, DropdownMenu, DropdownItem, UncontrolledDropdown,
@@ -250,7 +249,7 @@ class StockPage extends React.PureComponent {
                                     <InputGroup size="md">
                                         <Input className="col-sm-12 d-border bg-dark-grey" value="AALI" size="md"/>
                                         <InputGroupAddon addonType="append">
-                                            <InputGroupText className="bg-gold text-white">90%</InputGroupText>
+                                            <InputGroupText className="bg-gold">90%</InputGroupText>
                                         </InputGroupAddon>
                                     </InputGroup>
                                 </div>
@@ -269,8 +268,8 @@ class StockPage extends React.PureComponent {
                                 </div>
 
                                 <div className="col-sm-4 align-self-center mx-2 px-0">
-                                    <Button className="d-border mx-1 pull-right col-sm-5 col-md-3" size="md" color="success" onClick={this.buttonClickSell}><span className="text-white">Sell</span></Button>
-                                    <Button className="d-border mx-1 pull-right col-sm-5 col-md-3" size="md" color="danger" onClick={this.buttonClickBuy}><span className="text-white">Buy</span></Button>
+                                    <Button className="d-border mx-1 pull-right col-sm-5 col-md-3" size="md" color="success" onClick={this.buttonClickSell}><span>Sell</span></Button>
+                                    <Button className="d-border mx-1 pull-right col-sm-5 col-md-3" size="md" color="danger" onClick={this.buttonClickBuy}><span>Buy</span></Button>
                                 </div>
                             </div>
                             <div className="px-1 mx-0 col-sm-12 row">
@@ -318,10 +317,10 @@ class StockHistoryPage extends React.PureComponent {
                                                     name="date"
                                                     id="exampleDate"
                                                     placeholder="date placeholder"
-                                                    className="bg-gray-tradding d-border text-white"
+                                                    className="bg-gray-tradding d-border"
                                                 />
                                                 <InputGroupAddon addonType="prepend" className="bg-gray-tradding d-border text-white">
-                                                    <InputGroupText className="bg-gray-tradding d-border text-white">
+                                                    <InputGroupText className="bg-gray-tradding d-border">
                                                         <i className="fa fa-calendar-alt"></i>
                                                     </InputGroupText>
                                                 </InputGroupAddon>
@@ -686,7 +685,7 @@ class TableStockWatchlist_Base extends React.Component{
         return(<>
             <WSConnectionAction ref="wsAction" /> {/* websocket connection component */}
             <div className="card card-75 bg-black-trading">
-                <button onClick={this.handleSubcribeMsg}>subscribe</button>
+                {/*<button onClick={this.handleSubcribeMsg}>subscribe</button>*/}
                 <AppFrameAction ref="frameAction" />
                 <div className="card-header d-border-bottom">
                     <div className="col-sm-12 px-0 row">

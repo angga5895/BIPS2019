@@ -14,7 +14,7 @@ class TableInfoTransaction extends React.PureComponent{
                         <InputGroup size="sm">
                             <Input className="col-sm-12 d-border bg-dark-grey" value="AALI" size="sm"/>
                             <InputGroupAddon addonType="append">
-                                <InputGroupText className="bg-gold text-white">90%</InputGroupText>
+                                <InputGroupText className="bg-gold">90%</InputGroupText>
                             </InputGroupAddon>
                         </InputGroup>
                     </div>

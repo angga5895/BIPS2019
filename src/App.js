@@ -1,8 +1,6 @@
 // system Libraries
 import React from 'react';
-import './semantic-dist/semantic.min.css';
 import { Icon } from 'semantic-ui-react';
-import './App.css';
 
 // internal framework libraries
 import { AppFrameProvider, AppFrame, AppModal } from './appframe.js';
@@ -26,6 +24,21 @@ import StockPage, {CustomFrameHeaderStock, Stock} from './app_pages/stockPage';
 import TradePage from './app_pages/tradePage';
 import LoginPage from './app_pages/loginPage';
 import MainPage from './app_pages/mainPage';
+
+//choose night or light
+const cssmode = 'light';
+
+if (cssmode == 'night'){
+    // require css nightmode
+    require('./semantic-dist/semantic.min.css');
+    require('./bootstrap-dist/bootstrap/dist/css/bootstrap.min.css');
+    require('./App.css');
+} else if(cssmode == 'light') {
+    // require css lightmode
+    require('./semantic-dist/semantic-lightmode.min.css');
+    require('./bootstrap-dist/bootstrap/dist/css/bootstrap-lightmode.min.css');
+    require('./App-lightmode.css');
+}
 
 class App extends React.Component {
   
@@ -58,3 +71,4 @@ class App extends React.Component {
 }
 
 export default App;
+export {cssmode};

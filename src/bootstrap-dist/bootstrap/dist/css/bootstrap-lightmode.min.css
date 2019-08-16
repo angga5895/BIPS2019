@@ -2825,41 +2825,41 @@ fieldset:disabled a.btn {
 }
 
 .btn-dark {
-    color: #fff;
-    background-color: #3D3E3F;
-    border-color: #3D3E3F
+    color: #767676;
+    background-color: #CDCDCE;
+    border-color: #CDCDCE
 }
 
 .btn-dark:hover {
-    color: #fff;
-    background-color: #333332;
-    border-color: #333332;
+    color: #9F9F9F;
+    background-color: #CDCDD3;
+    border-color: #CDCDD3;
 }
 
 .btn-dark.focus,
 .btn-dark:focus {
-    box-shadow: 0 0 0 .2rem #3B3838;
+    box-shadow: 0 0 0 .2rem #CDCDDD;
 }
 
 .btn-dark.disabled,
 .btn-dark:disabled {
-    color: #fff;
-    background-color: #3D3E3F;
-    border-color: #3D3E3F
+    color: #767676;
+    background-color: #CDCDDD;
+    border-color: #CDCDDD;
 }
 
 .btn-dark:not(:disabled):not(.disabled).active,
 .btn-dark:not(:disabled):not(.disabled):active,
 .show>.btn-dark.dropdown-toggle {
-    color: #fff;
-    background-color: #3B3838;
-    border-color: #3B3838;
+    color: #909090;
+    background-color: #CDCDDD;
+    border-color: #CDCDDD;
 }
 
 .btn-dark:not(:disabled):not(.disabled).active:focus,
 .btn-dark:not(:disabled):not(.disabled):active:focus,
 .show>.btn-dark.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #3B3838;
+    box-shadow: 0 0 0 .2rem #CDCDDD;
 }
 
 .btn-outline-primary {
@@ -4757,11 +4757,11 @@ input[type=submit].btn-block {
 
 .navbar-dark .navbar-toggler {
     color: rgba(255, 255, 255, .5);
-    border-color: rgba(255, 255, 255, .1)
+    border-color: rgba(153, 153, 153, .5)
 }
 
 .navbar-dark .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(153, 153, 153, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 }
 
 .navbar-dark .navbar-text {
@@ -4836,7 +4836,7 @@ input[type=submit].btn-block {
 .card-header {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
-    background-color: rgba(0, 0, 0, .03);
+    /*background-color: rgba(0, 0, 0, .03);*/
     border-bottom: 1px solid rgba(0, 0, 0, .125)
 }
 
@@ -9916,7 +9916,7 @@ button.bg-dark:hover {
 }
 
 .text-white {
-    color: #fff!important
+    color: #767676!important
 }
 
 .text-primary {

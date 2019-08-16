@@ -3,6 +3,7 @@ import {Button, CustomInput, Input, InputGroup, InputGroupAddon, InputGroupText,
 import Select from "react-select";
 import {AppFrameAction} from "../../appframe";
 import VerifyPIN, {tanggal} from "../verifyPin";
+import {cssmode} from "../../App";
 
 const options = [
     { value: 'rg', label: 'RG' },
@@ -43,7 +44,7 @@ class FormSell extends React.PureComponent{
                         <Input className="col-sm-3 d-border bg-dark-grey " size="md" value="AALI"/>
                         <InputGroup className="col-sm-9">
                             <InputGroupAddon addonType="append">
-                                <InputGroupText className="bg-gold text-white">90%</InputGroupText>
+                                <InputGroupText className="bg-gold">90%</InputGroupText>
                             </InputGroupAddon>
                             <Input className="d-border bg-dark-grey " size="md" value="Astra Argo Lestari Tbk."/>
                         </InputGroup>
@@ -71,29 +72,8 @@ class FormSell extends React.PureComponent{
                 <div className="form-group row">
                     <div className="col-sm-2">Mkt.</div>
                     <div className="col-sm-10 mr-0 pr-0 row">
-                        <Select
-                            className="header-color col-sm-6"
-                            defaultValue={options[0]}
-                            label="Single select"
-                            options={options}
-                            theme={theme => ({
-                                ...theme,
-                                borderRadius: 0,
-                                colors: {
-                                    ...theme.colors,
-                                    neutral0: '#181717',
-                                    neutral20 : '#272323',
-                                    neutral30 : '#565252',
-                                    neutral40 : '#cccccc',
-                                    neutral80 : '#FFFFFF',
-                                    primary75 : '#FFFFFF',
-                                    primary50 : '#0370bb',
-                                    primary25 : '#0370bb',
-                                    primary : '#0363A7',
-                                },
-                            })}
-                        />
-                        <CustomInput className="mx-2 col-sm-5 bg-dark-grey py-2" type="checkbox" id={this.props.cb4} label="Order Booking" />
+                        <SelectMkt/>
+                        <CustomInput className="mx-2 col-sm-5 bg-dark-grey py-2 pr-0" type="checkbox" id={this.props.cb4} label="Order Booking" />
                     </div>
                 </div>
 
@@ -101,28 +81,7 @@ class FormSell extends React.PureComponent{
                     <div className="col-sm-7 mx-0 px-0 row">
                         <div className="col-sm-3">Expire</div>
                         <div className="col-sm-9 mx-0 px-2 mb-3">
-                            <Select
-                                className="header-color col-sm-12"
-                                defaultValue={options[1]}
-                                label="Single select"
-                                options={options}
-                                theme={theme => ({
-                                    ...theme,
-                                    borderRadius: 0,
-                                    colors: {
-                                        ...theme.colors,
-                                        neutral0: '#181717',
-                                        neutral20 : '#272323',
-                                        neutral30 : '#565252',
-                                        neutral40 : '#cccccc',
-                                        neutral80 : '#FFFFFF',
-                                        primary75 : '#FFFFFF',
-                                        primary50 : '#0370bb',
-                                        primary25 : '#0370bb',
-                                        primary : '#0363A7',
-                                    },
-                                })}
-                            />
+                            <SelectExp />
                         </div>
 
                         <div className="col-sm-3">Value</div>
@@ -175,6 +134,102 @@ class PINVerify extends React.Component {
                 <AppFrameAction ref="frameAction" />
                 <VerifyPIN tipe = 'sell'/>
             </>
+        );
+    }
+}
+
+class SelectMkt extends React.Component {
+    selectStyleNight = theme => ({
+        ...theme,
+        borderRadius: 0,
+        colors: {
+            ...theme.colors,
+            neutral0  : '#181717',
+            neutral20 : '#565252',
+            neutral30 : '#565252',
+            neutral40 : '#cccccc',
+            neutral80 : '#FFFFFF',
+            primary75 : '#FFFFFF',
+            primary50 : '#4D4D4E',
+            primary25 : '#4D4D4E',
+            primary : '#808282',
+        },
+    });
+
+    selectStyleLight = theme => ({
+        ...theme,
+        borderRadius: 0,
+        colors: {
+            ...theme.colors,
+            neutral0  : '#E7E7E7',
+            neutral20 : '#9A9A9A',
+            neutral30 : '#9A9A9A',
+            neutral40 : '#767676',
+            neutral80 : '#888888',
+            primary75 : '#888888',
+            primary50 : '#F3F3F3',
+            primary25 : '#F3F3F3',
+            primary : '#0363A7',
+        },
+    });
+
+    render() {
+        return (
+            <Select
+                className="header-color col-sm-6"
+                defaultValue={options[0]}
+                label="Single select"
+                options={options}
+                theme={cssmode == 'night' ? this.selectStyleNight : this.selectStyleLight}
+            />
+        );
+    }
+}
+
+class SelectExp extends React.Component {
+    selectStyleNight = theme => ({
+        ...theme,
+        borderRadius: 0,
+        colors: {
+            ...theme.colors,
+            neutral0  : '#181717',
+            neutral20 : '#565252',
+            neutral30 : '#565252',
+            neutral40 : '#cccccc',
+            neutral80 : '#FFFFFF',
+            primary75 : '#FFFFFF',
+            primary50 : '#4D4D4E',
+            primary25 : '#4D4D4E',
+            primary : '#808282',
+        },
+    });
+
+    selectStyleLight = theme => ({
+        ...theme,
+        borderRadius: 0,
+        colors: {
+            ...theme.colors,
+            neutral0  : '#E7E7E7',
+            neutral20 : '#9A9A9A',
+            neutral30 : '#9A9A9A',
+            neutral40 : '#767676',
+            neutral80 : '#888888',
+            primary75 : '#888888',
+            primary50 : '#F3F3F3',
+            primary25 : '#F3F3F3',
+            primary : '#0363A7',
+        },
+    });
+
+    render() {
+        return (
+            <Select
+                className="header-color col-sm-12"
+                defaultValue={options[1]}
+                label="Single select"
+                options={options}
+                theme={cssmode == 'night' ? this.selectStyleNight : this.selectStyleLight}
+            />
         );
     }
 }

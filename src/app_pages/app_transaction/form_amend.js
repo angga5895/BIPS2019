@@ -44,7 +44,7 @@ class FormAmend extends React.PureComponent{
                         <Input className="col-sm-3 d-border bg-dark-grey " size="md" value="AALI"/>
                         <InputGroup className="col-sm-9">
                             <InputGroupAddon addonType="append">
-                                <InputGroupText className="bg-gold text-white">90%</InputGroupText>
+                                <InputGroupText className="bg-gold">90%</InputGroupText>
                             </InputGroupAddon>
                             <Input className="d-border bg-dark-grey " size="md" value="Astra Argo Lestari Tbk."/>
                         </InputGroup>
